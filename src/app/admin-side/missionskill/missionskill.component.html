@@ -31,7 +31,17 @@
                  <td>{{item.skillName}}</td>
                  <td style="text-align: right;color:#14c506;" [ngStyle]="item.status == 'active' ? {'color': '#14c506'} : {'color': '#ff0000'}">{{item.status == 'active' ? 'Active' : 'In-Active'}}</td>
                  <td style="text-align: right;">
+                  <!-- Delete button added here -->
+                    <button class="btndelete" (click)="deleteSkillmodal(item.id)"><i class="fa fa-trash"></i></button>
+                  <!-- Delete button added here -->
 
+
+                  <!-- Edit button added here -->
+                  
+                    <!-- editSkillModal to be implemented -->
+                    <button class="btnedit"><i class="fa fa-edit"></i></button>
+
+                  <!-- Edit button added here -->
                  </td>
                </tr>
                <tr *ngIf="result.length === 0">
